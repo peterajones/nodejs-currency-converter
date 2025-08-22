@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js Currency Converter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Currency Converter</h1>
+    </div>
+    <div class="date">
+      <span class="date-text"></span>
+      <a href="https://exchangeratesapi.io/" target="_blank" rel="noopener noreferrer">
+        <img src="img/exchangeratesapi_white_logo.svg" alt="Powered by exchangeratesapi.io" class="api-logo">
+      </a>
+    </div>
+    <div class="fetch-error"></div>
+    <ul class="currencies"></ul>
+    <div class="currency-controls">
+      <button class="reset-amounts-btn">Reset Amounts</button>
+      <button class="clear-currencies-btn">Clear Currencies</button>
+    </div>
+    <button class="add-currency-btn"><i class="fas fa-long-arrow-alt-left"></i>Add Currency</button>
+    <ul class="add-currency-list"></ul>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

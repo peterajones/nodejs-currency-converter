@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-currency-converter",
+  "version": "1.0.0",
+  "description": "A Node.js currency converter with real-time exchange rates",
+  "main": "js/main.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "currency",
+    "converter",
+    "exchange-rates",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^5.1.0"
+  }
+}
