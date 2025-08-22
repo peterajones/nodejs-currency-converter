@@ -8,7 +8,7 @@ The tutorial is a two part video.
 
 [Part Two](https://www.youtube.com/watch?v=F4TfBopAmaY)
 
-You can find the original code on [CodePen](https://codepen.io/Coding_Journey/pen/exjrdghttps://codepen.io/Coding_Journey/pen/exjrdg).
+You can find the original code on [CodePen](https://codepen.io/Coding_Journey/pen/exjrdg).
 
 In the tutorial, the flag icons are links to images but I wanted to make this a little more self contained so I grabbed some flags from [flagicons](https://flagicons.lipis.dev).
 
@@ -17,17 +17,23 @@ icons in the [lipis repo](https://github.com/lipis/flag-icon-css).
 
 You will also need an API KEY from [Exchangeratesapi](https://exchangeratesapi.io/). At the time the videos were recorded, the API KEY was not required but it is required now - **it's free!**
 
+## Prerequisites
+
+- Node.js v22 or greater
+- npm (comes with Node.js)
+
 ## Setup Instructions
 
 1. Get your free API key from [exchangeratesapi.io](https://exchangeratesapi.io/)
-2. Add your API key to the `.env` file:
+2. Copy the environment template: `cp .env.example .env`
+3. Add your API key to the `.env` file:
    ```
    EXCHANGE_RATES_API_KEY=your_api_key_here
    EXCHANGE_RATES_BASE_URL=http://api.exchangeratesapi.io/v1/latest?access_key=
    ```
-3. Install dependencies: `npm install`
-4. Start the server: `npm start`
-5. Open your browser to `http://localhost:4545`
+4. Install dependencies: `npm install`
+5. Start the server: `npm start`
+6. Open your browser to `http://localhost:4545`
 
 ## Features
 
@@ -54,6 +60,7 @@ You will also need an API KEY from [Exchangeratesapi](https://exchangeratesapi.i
 - **Responsive styling** - Works on different screen sizes
 - **API provider credit** - Clickable logo linking to exchangeratesapi.io
 - **Clean, modern UI** - Professional currency converter widget
+- I also added a couple of my own niceties. Can you find them?
 
 ## Architecture
 
@@ -65,4 +72,11 @@ This project demonstrates **proper environment variable usage**:
 
 **Note:** This is the correct way to handle API keys in web applications!
 
-I also added a couple of my own niceties. Can you find them?
+## Troubleshooting
+
+Having issues? This is a simple app - just ask Claude for help!
+
+## License
+
+This project is licensed under the MIT License.
+
