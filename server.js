@@ -16,6 +16,16 @@ app.get('/api/rates', async (req, res) => {
     const response = await fetch(url);
     const data = await response.json();
     
+    // Check if API returned an error
+    if (data.error) {
+      return res.status(400).json({ error: data.error.info || 'API error occurred' });
+    }
+    
+    // Ensure rates object exists
+    if (!data.rates) {
+      return res.status(500).json({ error: 'No rates data received from API' });
+    }
+    
     res.json(data);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch exchange rates' });

@@ -401,6 +401,18 @@ function initializeApp() {
   fetch('/api/rates')
     .then(res => res.json())
     .then(data => {
+      // Check for error response
+      if (data.error) {
+        alert('Failed to load exchange rates: ' + data.error);
+        return;
+      }
+      
+      // Check if rates exist
+      if (!data.rates) {
+        alert('Failed to load exchange rates: No data received');
+        return;
+      }
+      
       document.querySelector('.date-text').textContent = data.date;
       data.rates['EUR'] = 1;
       currencies = currencies.filter(currency => data.rates[currency.abbreviation]);
@@ -408,7 +420,9 @@ function initializeApp() {
       populateAddCurrencyList();
       populateCurrenciesList();
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      alert('Failed to connect to the server');
+    });
 }
 
 // Initialize the app after all DOM elements and functions are defined

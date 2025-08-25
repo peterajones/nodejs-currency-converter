@@ -3,7 +3,14 @@
 ## Project Overview
 A Node.js currency converter that fetches real-time exchange rates and allows users to convert between multiple currencies with a clean, interactive UI.
 
-## Recent Changes (2025-08-22)
+## Recent Changes (2025-08-25)
+### Bug Fix - API Error Handling
+- **Fixed TypeError crash** when API returns error response instead of rates data
+- **Added robust error handling** in both server and client for API failures
+- **API key updated** due to usage limit being reached on previous key
+- **Improved user experience** with meaningful error messages instead of crashes
+
+## Previous Changes (2025-08-22)
 ### Complete Currency Converter Widget
 - **Implemented proper API key security** - API key stays server-side only
 - **Created Express server** with `/api/rates` endpoint that proxies external API calls
